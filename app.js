@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 app.get('/events', async (req, res) => {
     const events = await Events.find({});
-    res.render('events/index', {events})
+    res.render('events', {events})
 })
 
 app.get('/events/:id', async (req, res) => {
