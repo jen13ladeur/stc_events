@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const Events = require('./models/events');
-const events = require('./models/events');
+const Business = require('./models/events');
 
 
 
@@ -33,11 +33,21 @@ app.get('/events', async (req, res) => {
     const events = await Events.find({});
     res.render('events', {events})
 })
-
-app.get('/events/:id', async (req, res) => {
-    res.render('events/scarecrowShow')
+app.get('/events/businessShow', async (req, res) => {
+    const business = await Business.find({});
+    res.render('businessShow', {business})
 })
 
+
+app.get('/events/scarecrowShow', async (req, res) => {
+    res.render('events/scarecrowShow')
+})
+app.get('/events/holidayShow', async (req, res) => {
+    res.render('events/holidayShow')
+})
+app.get('/events/restaurantShow', async (req, res) => {
+    res.render('events/restaurantShow')
+})
 
 
 
@@ -45,3 +55,4 @@ app.get('/events/:id', async (req, res) => {
 app.listen(3000, () => {
     console.log('serving on Port 3000')
 })
+
