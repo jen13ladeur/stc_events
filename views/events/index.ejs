@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <title>Events</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="public/stylesheets/app.css">
+  <title>Events</title>
 </head>
+
 <body style="text-align: center;">
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Explore</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -22,43 +27,83 @@
     </div>
   </nav>
 
-    <h1 style="font-style: italic;">Fun For Everyone</h1>
-    <p>There's always something going on in St. Chalres! View our upcoming events below and we hope to see you there!</p>
-    
-      <div id="scarecrow" class="card mb-4 text-white bg-warning" style="max-width: 18rem;">
-        <img src="https://images.unsplash.com/photo-1572987943310-0ce220d83fa4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2NhcmVjcm93fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
-        <div class="card-body">
+  <h1 style="font-style: italic;">Fun For Everyone</h1>
+  <p>There's always something going on in St. Chalres! View our upcoming events below and we hope to see you there!</p>
+
+  <h3>Events Around Downtown</h3>
+  <div class="container mb-4">
+    <div class="row">
+      <div class="col-sm">
+        <div id="scarecrow" class="card mb-4 text-white bg-warning" style="max-width: 18rem;">
+          <img
+            src="https://images.unsplash.com/photo-1572987943310-0ce220d83fa4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2NhcmVjcm93fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            class="card-img-top" alt="...">
           <h3 class="card-title">Scarecrow Festival</h3>
-          <p class="card-text">Stroll around downtown to see handcrafted scarecrows and find special fall deals at our local shops.</p>
+          <p class="card-text">Stroll around town to see handcrafted scarecrows and enjoy fall specials at participating local shops.</p>
           <p class="card-text"><small class="text-muted">October 2021</small></p>
-        <button id="scarecrow" type="button" class="btn btn-dark"><a href="/events/scarecrowShow" onclick="">Event Details</a></button>
+          <button id="scarecrow" type="button" class="btn btn-dark"><a href="/events/scarecrowShow" onclick="">Event
+              Details</a></button>
         </div>
       </div>
-
-      <div id="holiday" class="card mb-4 text-white bg-danger" style="max-width: 18rem;">
-        <img src="https://images.unsplash.com/photo-1607109946143-ee98d991846e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2hyaXN0bWFzJTIwbGlnaHRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
-        <div class="card-body">
+      <div class="col-sm">
+        <div id="holiday" class="card mb-4 text-white bg-danger" style="max-width: 18rem;">
+          <img
+            src="https://images.unsplash.com/photo-1607109946143-ee98d991846e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2hyaXN0bWFzJTIwbGlnaHRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            class="card-img-top" alt="...">
           <h3 class="card-title">Holiday Homecoming</h3>
           <p class="card-text">The most magical celebration to kick off your holiday season!</p>
           <p class="card-text"><small class="text-muted">November 2021</small></p>
-        <button id="holiday" type="button" class="btn btn-dark"><a href="/events/holidayShow" onclick="">Event Details</a></button>
+          <button id="holiday" type="button" class="btn btn-dark"><a href="/events/holidayShow" onclick="">Event
+              Details</a></button>
         </div>
       </div>
-
-      <div id="restaurant" class="card mb-4 text-white bg-info" style="max-width: 18rem;">
-        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
-        <div class="card-body">
+      <div class="col-sm">
+        <div id="restaurant" class="card mb-4 text-white bg-info" style="max-width: 18rem;">
+          <img
+            src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            class="card-img-top" alt="...">
           <h3 class="card-title">Restaurant Week</h3>
-          <p class="card-text">Enjoy the best food St. Charles has to offer this week! Support local!</p>
+          <p class="card-text">Enjoy the best food St. Charles has to offer this week. Support local!</p>
           <p class="card-text"><small class="text-muted">January 2021</small></p>
-        <button id="restaurant" type="button" class="btn btn-dark"><a href="/events/restaurantShow" onclick="">Event Details</a></button>
+          <button id="restaurant" type="button" class="btn btn-dark"><a href="/events/restaurantShow" onclick="">Event
+              Details</a></button>
         </div>
       </div>
-  
+    </div>
+
+    <h3>Parks Around Downtown</h3>
+    <div class="container mb-4">
+      <div class="row">
+        <div class="col-sm" id="bakerPark">
+          Baker Memorial Park
+        </div>
+        <div class="col-sm">
+          Lincoln Park
+        </div>
+        <div class="col-sm">
+          Langum Park
+        </div>
+        <div class="col-sm">
+          Mount St. Mary Park
+        </div>
+      </div>
+    </div>
+
+    <h3>Concerts Around Downtown</h3>
+    <p>Enjoy music of all kinds at our newly renovated space at the Baker Community Center.
+      You can purchase tickets through <a onclick=window.open('https://norrisculturalarts.com/')>
+        <span class="concertId">The Norris Cultural Arts Center</span></a> website.
+    </p>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"></script>
 </body>
+
 </html>
