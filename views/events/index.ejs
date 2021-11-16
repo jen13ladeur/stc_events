@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" href="public/stylesheets/app.css">
-  <title>Events</title>
-</head>
-
-<body style="text-align: center;">
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Explore</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" href="/">Home</a>
-        <a class="nav-link" href="#">Events<span class="sr-only">current</span></a>
-        <a class="nav-link" href="/events/businessShow">Business Resources</a>
-      </div>
-    </div>
-  </nav>
-
-  <h1 id="fun">Fun For Everyone</h1>
+  <% layout('layouts/boilerplate') %> 
+  <h1>Fun For Everyone</h1>
   <p>There's always something going on in St. Chalres! View our upcoming events below and we hope to see you there!</p>
 
   <h3>Events Around Downtown</h3>
@@ -39,8 +12,7 @@
             src="https://images.unsplash.com/photo-1572987943310-0ce220d83fa4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2NhcmVjcm93fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             class="card-img-top" alt="...">
           <h3 class="card-title">Scarecrow Festival</h3>
-          <p class="card-text">Stroll around town to see handcrafted scarecrows and enjoy fall specials at participating
-            local shops.</p>
+          <p class="card-text">Stroll around our charming downtown to see handcrafted scarecrows.</p>
           <p class="card-text"><small class="text-muted">October 2021</small></p>
           <button id="scarecrow" type="button" class="btn btn-dark"><a href="/events/scarecrowShow" onclick="">Event
               Details</a></button>
@@ -71,18 +43,17 @@
         </div>
       </div>
     </div>
-
     <h3>Parks Around Downtown</h3>
     <div class="container mb-4">
       <div class="row">
         <div class="col-sm">
           <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="https://www.stcparks.org/wp-content/uploads/2017/12/Baker-Memorial-Park.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Baker Memorial Park</h5>
-              <p class="card-text">This park is home to one of the Park District’s permanent sculptures, Framework for a
-                Donut by Howard J. Russo, sponsored by the Public Art Committee of the Downtown St. Charles Partnership
-                in cooperation with the Park District. It was dedicated October 27, 2007.e</p>
+              <p class="card-text">A historical landmark that was established in the 1920s, is named in honor of
+                Edward J. Baker, St. Charles' great philanthropist. Baker built many buildings that both beautify and serve the community.
+              </p>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Main Street & N. 5th Ave</li>
@@ -91,7 +62,7 @@
         </div>
         <div class="col-sm">
           <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="https://www.stcparks.org/wp-content/uploads/2017/12/Lincoln-Park.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Lincoln Park</h5>
               <p class="card-text">Home to the district's popular summer Concerts in the Park series
@@ -105,22 +76,10 @@
         </div>
         <div class="col-sm">
           <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Langum Park</h5>
-              <p class="card-text">Community park along the Fox River and near the Fox River Trail.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">7th Ave and Madison Ave</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm">
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="data:image/jpeg;base64,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" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Mount St. Mary Park</h5>
-              <p class="card-text">Multi-use public space with an arboretum, picnic areas, fishing, skate park & play equipment.
+              <p class="card-text">Multi-use public space with an arboretum, picnic areas, fishing, skate park and play equipment.
                 Regional Trail access to the Fox River Trail.
               </p>
             </div>
@@ -135,18 +94,5 @@
     <h3>Concerts Around Downtown</h3>
     <p>Enjoy music of all kinds at our newly renovated space at the Baker Community Center.
       You can purchase tickets through <a onclick=window.open('https://norrisculturalarts.com/')>
-        <span class="concertId" style="text-decoration-line: underline;">The Norris Cultural Arts Center</span></a> website.
+        <span style="text-decoration-line: underline;">The Norris Cultural Arts Center</span></a> website.
     </p>
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"></script>
-</body>
-
-</html>
