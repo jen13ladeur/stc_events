@@ -11,12 +11,28 @@
     <title>STC EVENTS</title>
 </head>
 
-<body class="d-flex flex-column vh-100">
+<body class="d-flex flex-column vh-100" id="body">
    <%- include('../partials/navbar') %> 
     <main class="container mt-4">
         <%- body %>
 
     </main>
+    <div class="row">
+        <div class="card w-100 mt-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">St. Charles Events</h5>
+              <p class="card-text">We look forward to you visiting St. Charles soon! We'd love to hear from you. Contact information below.</p>
+              <p class="card-text"><span style="font-weight: bold;">Email:</span> info@stcevents.org <br><span style="font-weight: bold;">Phone:</span> (888) 630-1834</p>
+            </div> 
+            <div class="card-body">
+            <h5 class="card-title">Join thousands of others that get local deals, discounts and info about St. Charles events!</h5>
+              <p class="card-text">Enter your email here* </p>
+              <a href="#" class="btn btn-primary">Sign Up!</a>
+            </div>
+          </div>
+        </div>
+      </div>
 <%- include('../partials/footer') %> 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
