@@ -1,3 +1,7 @@
+#body {
+    background-color: rgba(130, 130, 221, 0.445);
+}
+
 .content {
     text-align: center;
 }
@@ -12,4 +16,16 @@
     margin-right: auto;
     display: block;
     width: 100%;
+}
+
+.index {
+    text-align: center;
+}
+
+.card {
+    text-align: center;
+}
+
+.businessLinks {
+    text-decoration: underline;
 }
