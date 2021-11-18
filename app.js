@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
+const Eat = require('./models/events');
+const Stay = require('./models/events');
 const Events = require('./models/events');
 const Business = require('./models/events');
 
@@ -33,13 +35,23 @@ app.get('/', (req, res) => {
 })
 
 
+
+
+app.get('/eatShowPage', async (req, res) => {
+    const eat = await Eat.find({});
+    res.render('eatShowPage', {eat})
+})
+app.get('/stayShowPage', async (req, res) => {
+    const stay = await Stay.find({});
+    res.render('stayShowPage', {stay})
+})
 app.get('/events', async (req, res) => {
     const events = await Events.find({});
     res.render('events', {events})
 })
 app.get('/events/businessShow', async (req, res) => {
     const business = await Business.find({});
-    res.render('businessShow', {business})
+    res.render('businessShow', { business })
 })
 
 
