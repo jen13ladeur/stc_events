@@ -66,6 +66,15 @@ app.get('/events/restaurantShow', async (req, res) => {
 })
 
 
+app.get('/itineraries/oneDay', async (req, res) => {
+    res.render('itineraries/oneDay')
+})
+app.get('/itineraries/weekendStay', async (req, res) => {
+    res.render('itineraries/weekendStay')
+})
+app.get('/itineraries/familyFriendly', async (req, res) => {
+    res.render('itineraries/familyFriendly')
+})
 
 
 app.listen(3000, () => {
