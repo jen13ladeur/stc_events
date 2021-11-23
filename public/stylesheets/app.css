@@ -30,7 +30,18 @@
     text-decoration: underline;
 }
 
-#morning {
-    
+#itineraryTitle {
+    text-align: left;
+}
 
+#morning {
+    background-color: rgb(223, 223, 39);
+}
+
+#afternoon {
+    background-color: tomato;
+}
+
+#evening {
+    background-color: rgb(49, 130, 236);
 }
