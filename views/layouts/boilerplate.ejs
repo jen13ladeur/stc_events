@@ -27,8 +27,15 @@
             </div> 
             <div class="card-body">
             <h5 class="card-title">Join thousands of others that get local deals, discounts and info about St. Charles events!</h5>
-              <p class="card-text">Enter your email here* </p>
-              <a href="#" class="btn btn-primary">Sign Up!</a>
+              <form action="/signup" method="POST" class="form" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="form-group" type="text" id="text">
+              <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email here">
+              <div class="valid-feedback">
+                Looks good!
+            </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
             </div>
           </div>
         </div>
