@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
+const request = require('request');
+const bodyParser = require('body-parser');
 const Eat = require('./models/events');
 const Stay = require('./models/events');
 const Events = require('./models/events');
@@ -27,13 +29,20 @@ app.engine('ejs', ejsMate);
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
+//Bodyparser middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+//sign up route
+app.post('/signup', (req, res) => {
+    console.log(req.body)
+    res.send('IT WORKED!!')
+});
 
 
 app.get('/', (req, res) => {
     res.render('home')
 })
-
 
 
 
@@ -76,6 +85,11 @@ app.get('/itineraries/familyFriendly', async (req, res) => {
     res.render('itineraries/familyFriendly')
 })
 
+
+
+
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, console.log(`Serving on ${PORT}`));
 
 app.listen(3000, () => {
     console.log('serving on Port 3000')
