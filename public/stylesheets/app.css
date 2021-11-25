@@ -8,7 +8,14 @@
 
 .discover {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
+    font-size: 5em;
+}
+.stc {
+    font-family: 'Comforter Brush', cursive;
+    font-size: 5em;
+}
+.pride {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .img-fluid {
@@ -28,6 +35,7 @@
 
 .businessLinks {
     text-decoration: underline;
+    font-weight: bold;
 }
 
 #itineraryTitle {
@@ -44,4 +52,17 @@
 
 #evening {
     background-color: rgb(49, 130, 236);
+}
+
+#holidayEvent {
+    text-align: center;
+}
+
+.title {
+    text-decoration: underline dotted;
+}
+
+.form {
+    display: inline-block;
+    width: 40%;
 }
