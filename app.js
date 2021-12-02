@@ -23,6 +23,7 @@ db.once("open", () => {
 });
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 
 app.engine('ejs', ejsMate);
@@ -30,13 +31,48 @@ app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-//Bodyparser middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-//sign up route
 app.post('/signup', (req, res) => {
-    console.log(req.body)
-    res.send('IT WORKED!!')
+    const { email, js } = req.body;
+    console.log(req.body);
+
+    const mcData = {
+        members: [
+            {
+                email_address: email,
+                status: 'pending'
+            }
+        ]
+    }
+
+    const mcDataPost = JSON.stringify(mcData);
+
+    const options = {
+        url: 'https://us20.api.mailchimp.com/3.0/lists/6990bbc401',
+        method: 'POST',
+        headers: {
+            Authorization: `auth ${mailchimp_KEY}`
+        },
+        body: mcDataPost
+    }
+
+    if (email) {
+        request(options, (err, response, body) => {
+            if (err) {
+                res.json({error: err})
+            } else {
+                if (js) {
+                    res.sendStatus(200);
+                } else {
+                    res.redirect('/success.html')
+                }
+            }
+        })
+    } else {
+        res.status(404).send({ message: 'Failed to send' });
+    }
 });
 
 
