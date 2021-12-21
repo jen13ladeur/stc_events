@@ -5,7 +5,7 @@ Come see what downtown St. Charles has to offer! One of the best suburbs in the 
 ### What To Do?
 * :plate_with_cutlery: Eat - Fine dining, quick eats, cocktails, & local favorites!
 * :luggage: Stay - Plan your visit today!
-* :deciduous_tree: Play - Concerts, parks, and events
+* :cartwheeling: Play - Concerts, parks, and events
 
 ### EXPLORE!
 [stc_events](https://)
