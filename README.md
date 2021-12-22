@@ -7,8 +7,12 @@ Come see what downtown St. Charles has to offer! One of the best suburbs in the 
 * :luggage: Stay - Plan your visit today!
 * :cartwheeling: Play - Concerts, parks, and events
 
-### Dive in and explore!
+### Dive In To Explore!
+What will you do when you visit St. Charles?
 [stc_events](https://)
+
+1. Sign up with an email to never miss out on fantastic deals or upcoming events!
+2. Need some help planning? Check out the pre-made itineraires to get you started on your next visit!
 
 <br />
 
