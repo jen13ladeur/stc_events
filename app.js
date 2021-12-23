@@ -36,7 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/signup', (req, res) => {
     const { email, js } = req.body;
-    console.log(req.body);
+    console.log(req.body.email);
 
     const mcData = {
         members: [
@@ -48,6 +48,7 @@ app.post('/signup', (req, res) => {
     }
 
     const mcDataPost = JSON.stringify(mcData);
+    const mailchimp_KEY = process.env.mailchimp_KEY;
 
     const options = {
         url: 'https://us20.api.mailchimp.com/3.0/lists/6990bbc401',

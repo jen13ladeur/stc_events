@@ -18,6 +18,10 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.showPageTitles {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .img-fluid {
     margin-left: auto;
     margin-right: auto;
@@ -27,6 +31,7 @@
 
 .index {
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .card {
@@ -65,4 +70,38 @@
 .form {
     display: inline-block;
     width: 40%;
+}
+
+
+
+
+.fadeout {
+    animation: fadeout is forwards;
+}
+.fadein {
+    animation: fadein 1s forwards;
+    display: block !important;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadein {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: block;
+    }
 }
