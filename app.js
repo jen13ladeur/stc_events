@@ -9,7 +9,15 @@ const Stay = require('./models/events');
 const Events = require('./models/events');
 const Business = require('./models/events');
 
+const dotenv = require('dotenv');
+dotenv.config();
+const mailchimp = require('@mailchimp/mailchimp_marketing');
 
+mailchimp.setConfig({
+  apiKey: process.env.mailchimp_KEY,
+    server: 'us20',
+});
+// console.log(process.env.mailchimp_KEY)
 
 mongoose.connect('mongodb://localhost:27017/stc_events', {
     useNewUrlParser: true,
@@ -42,7 +50,7 @@ app.post('/signup', (req, res) => {
         members: [
             {
                 email_address: email,
-                status: 'pending'
+                status: 'subscribed'
             }
         ]
     }
@@ -61,6 +69,7 @@ app.post('/signup', (req, res) => {
 
     if (email) {
         request(options, (err, response, body) => {
+            console.log(response)
             if (err) {
                 res.json({error: err})
             } else {
@@ -78,7 +87,16 @@ app.post('/signup', (req, res) => {
 
 
 app.get('/', (req, res) => {
-    res.render('home')
+      
+
+async function callPing() {
+  const response = await mailchimp.lists.getListMembersInfo('6990bbc401');
+    console.log(response);
+    res.render('home') 
+}
+
+callPing();
+         
 })
 
 
